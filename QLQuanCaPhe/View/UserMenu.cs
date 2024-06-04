@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace QLQuanCaPhe
@@ -404,7 +405,7 @@ namespace QLQuanCaPhe
 
             for (int i = 2; i < dgvFood.Columns.Count + 1; i++)
             {
-                excel.Cells[1, i - 1] = dgvFood.Columns[i - 1].HeaderText;
+                excel.Cells[1, i - 1] = dgvFood.Columns[i - 1].HeaderText.Trim();
             }
 
             for (int i = 0; i < dgvFood.Rows.Count; i++)
@@ -421,7 +422,14 @@ namespace QLQuanCaPhe
                     }
                     else
                     {
-                        excel.Cells[i + 2, j] = dgvFood.Rows[i].Cells[j].Value.ToString();
+                        if (!string.IsNullOrWhiteSpace(Convert.ToString(dgvFood.Rows[i].Cells[j].Value)))
+                        {
+                            excel.Cells[i + 2, j] = dgvFood.Rows[i].Cells[j].Value.ToString();
+                        }
+                        else
+                        {
+                            excel.Cells[i + 2, j] = "";
+                        }
                     }
                 }
             }
@@ -497,7 +505,6 @@ namespace QLQuanCaPhe
             dt.Columns.Add("CategoryID", typeof(int));
             dt.Columns.Add("Unit", typeof(string));
             dt.Columns.Add("IsDeleteFood", typeof(int));
-            //List<FoodDTO> foodList = new List<FoodDTO>();
             try
             {
                 OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -510,34 +517,47 @@ namespace QLQuanCaPhe
                     Microsoft.Office.Interop.Excel.Worksheet worksheet = workbook.Worksheets["Sheet1"];
                     Microsoft.Office.Interop.Excel.Range range = worksheet.UsedRange;
 
-                    //int row;
-                    //int i = 0;
+
+                    List<FoodDTO> list = BUS_Food.Instance.GetFoodList();
 
                     for (int i = 2; i < range.Rows.Count + 1; i++)
                     {
-                        string categoryName = range.Cells[i, 1].Value.ToString();
                         string foodName = range.Cells[i, 2].Value.ToString();
-                        byte[] b = Convert.FromBase64String(range.Cells[i, 3].Value.ToString() + "=");
-                        float price = (float)range.Cells[i, 4].Value;
-                        string unit = range.Cells[i, 5].Value.ToString();
-                        int categoryID = (int)range.Cells[i, 6].Value;
 
-                        dt.Rows.Add(new object[] { foodName, b, price, categoryID, unit, 1 });
+                        bool exists = list.Any(food => food.FoodName == foodName);
+
+                        if (!exists)
+                        {
+                            string categoryName = range.Cells[i, 1].Value.ToString();
+                            byte[] b = null;
+                            if (!string.IsNullOrWhiteSpace(Convert.ToString(range.Cells[i, 3].Value)))
+                            {
+                                b = Convert.FromBase64String(range.Cells[i, 3].Value.ToString() + "=");
+                            }
+                            float price = (float)range.Cells[i, 4].Value;
+                            string unit = range.Cells[i, 5].Value.ToString();
+                            int categoryID = (int)range.Cells[i, 6].Value;
+
+                            dt.Rows.Add(new object[] { foodName, b, price, categoryID, unit, 1 });
+                        }
                     }
                     workbook.Close();
                     App.Quit();
                 }
             }
             catch { }
-            if (dt.Rows.Count > 0 && BUS_Food.Instance.InsertFoodToExcel(dt))
+            if (dt.Rows.Count > 0)
             {
-                BUS_Diary.Instance.InsertDiary(DateTime.Now, "Nhập danh sách món ăn", "Nhập danh sách món ăn", BUS_Account.DisplayName);
-                MessageBox.Show("Nhập dữ liệu từ excel thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                loadFood();
-            }
-            else
-            {
-                MessageBox.Show("Có lỗi khi nhập dữ liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (BUS_Food.Instance.InsertFoodToExcel(dt))
+                {
+                    BUS_Diary.Instance.InsertDiary(DateTime.Now, "Nhập danh sách món ăn", "Nhập danh sách món ăn", BUS_Account.DisplayName);
+                    MessageBox.Show("Nhập dữ liệu từ excel thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    loadFood();
+                }
+                else
+                {
+                    MessageBox.Show("Có lỗi khi nhập dữ liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
     }

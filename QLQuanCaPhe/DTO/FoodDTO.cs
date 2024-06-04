@@ -42,7 +42,7 @@ namespace QLQuanCaPhe.DTO
             this.CategoryName = row["CategoryName"].ToString();
             this.FoodName = row["foodName"].ToString();
             var image = row["FoodPhoto"];
-            if (image.ToString() != "")
+            if (image.ToString().Trim() != "")
             {
                 this.FoodPhoto = ImageEncryption.Instance.ByteArrayToImage((byte[])image);
             }

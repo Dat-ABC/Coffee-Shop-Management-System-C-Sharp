@@ -52,7 +52,7 @@ namespace QLQuanCaPhe.DTO
             Password = Encryption.Instance.Decrypt(row["Password"].ToString());
             DisplayName = row["DisplayName"].ToString();
             var image = row["OwnerPhoto"];
-            if (image.ToString() != "")
+            if (image.ToString().Trim() != "")
             {
                 OwnerPhoto = ImageEncryption.Instance.ByteArrayToImage((byte[])image);
             }

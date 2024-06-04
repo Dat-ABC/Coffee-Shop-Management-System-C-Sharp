@@ -1,0 +1,437 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props" Condition="Exists('..\packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DA7D6E51-CE54-42B8-9460-40D5507B4402}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QLQuanCaPhe</RootNamespace>
+    <AssemblyName>QLQuanCaPhe</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IO.RecyclableMemoryStream.3.0.0\lib\netstandard2.0\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel">
+      <HintPath>..\..\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1620.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1620.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.160.1000.6\lib\net462\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Threading.Tasks" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BUS\BUS_Account.cs" />
+    <Compile Include="BUS\BUS_Area.cs" />
+    <Compile Include="BUS\BUS_Bill.cs" />
+    <Compile Include="BUS\BUS_BillInfo.cs" />
+    <Compile Include="BUS\BUS_BillInformation.cs" />
+    <Compile Include="BUS\BUS_Category.cs" />
+    <Compile Include="BUS\BUS_CheckFormat.cs" />
+    <Compile Include="BUS\BUS_Customer.cs" />
+    <Compile Include="BUS\BUS_Decentralizaion.cs" />
+    <Compile Include="BUS\BUS_Diary.cs" />
+    <Compile Include="BUS\BUS_ExportDetail.cs" />
+    <Compile Include="BUS\BUS_ExportOrder.cs" />
+    <Compile Include="BUS\BUS_Food.cs" />
+    <Compile Include="BUS\BUS_ImportDetail.cs" />
+    <Compile Include="BUS\BUS_ImportOrder.cs" />
+    <Compile Include="BUS\BUS_Inventory.cs" />
+    <Compile Include="BUS\BUS_Items.cs" />
+    <Compile Include="BUS\BUS_Menu.cs" />
+    <Compile Include="BUS\BUS_Revenue.cs" />
+    <Compile Include="BUS\BUS_Shift.cs" />
+    <Compile Include="BUS\BUS_ShiftDivision.cs" />
+    <Compile Include="BUS\BUS_Supplier.cs" />
+    <Compile Include="BUS\BUS_Table.cs" />
+    <Compile Include="BUS\BUS_Warehouse.cs" />
+    <Compile Include="DAO\AccountDAO.cs" />
+    <Compile Include="DAO\AreaDAO.cs" />
+    <Compile Include="DAO\BillDAO.cs" />
+    <Compile Include="DAO\BillInfoDAO.cs" />
+    <Compile Include="DAO\BillInformationDAO.cs" />
+    <Compile Include="DAO\CategoryDAO.cs" />
+    <Compile Include="DAO\CheckFormatDAO.cs" />
+    <Compile Include="DAO\clsDatabase.cs" />
+    <Compile Include="DAO\CustomerDAO.cs" />
+    <Compile Include="DAO\DecentralizaionDAO.cs" />
+    <Compile Include="DAO\DiaryDAO.cs" />
+    <Compile Include="DAO\ExportDetailDAO.cs" />
+    <Compile Include="DAO\ExportOrderDAO.cs" />
+    <Compile Include="DAO\FoodDAO.cs" />
+    <Compile Include="DAO\ImportDetailDAO.cs" />
+    <Compile Include="DAO\ImportOrderDAO.cs" />
+    <Compile Include="DAO\InventoryDAO.cs" />
+    <Compile Include="DAO\ItemsDAO.cs" />
+    <Compile Include="DAO\MenuDAO.cs" />
+    <Compile Include="DAO\RevenueDAO.cs" />
+    <Compile Include="DAO\ShiftDAO.cs" />
+    <Compile Include="DAO\ShiftDivisionDAO.cs" />
+    <Compile Include="DAO\SupplierDAO.cs" />
+    <Compile Include="DAO\TableDAO.cs" />
+    <Compile Include="DAO\WarehouseDAO.cs" />
+    <Compile Include="DTO\AccountDTO.cs" />
+    <Compile Include="DTO\AccountTypeDTO.cs" />
+    <Compile Include="DTO\AreaDTO.cs" />
+    <Compile Include="DTO\BillDetailDTO.cs" />
+    <Compile Include="DTO\BillDTO.cs" />
+    <Compile Include="DTO\BillInfoDTO.cs" />
+    <Compile Include="DTO\BillInformationDTO.cs" />
+    <Compile Include="DTO\CategoryDTO.cs" />
+    <Compile Include="DTO\CustomerDTO.cs" />
+    <Compile Include="DTO\DecentralizaionDTO.cs" />
+    <Compile Include="DTO\DiaryDTO.cs" />
+    <Compile Include="DTO\Encryption.cs" />
+    <Compile Include="DTO\ExportDetailDTO.cs" />
+    <Compile Include="DTO\ExportOrderDTO.cs" />
+    <Compile Include="DTO\FoodDTO.cs" />
+    <Compile Include="DTO\ImageEncryption.cs" />
+    <Compile Include="DTO\ImportDetailDTO.cs" />
+    <Compile Include="DTO\ImportOrderDTO.cs" />
+    <Compile Include="DTO\InventoryDTO.cs" />
+    <Compile Include="DTO\ItemsDTO.cs" />
+    <Compile Include="DTO\MenuDTO.cs" />
+    <Compile Include="DTO\RevenueDTO.cs" />
+    <Compile Include="DTO\ShiftDivisionDTO.cs" />
+    <Compile Include="DTO\ShiftDTO.cs" />
+    <Compile Include="DTO\SupplierDTO.cs" />
+    <Compile Include="DTO\TableDTO.cs" />
+    <Compile Include="DTO\WarehouseDTO.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="View\frmAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmAccount.Designer.cs">
+      <DependentUpon>frmAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmAddCustomer_Bill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmAddCustomer_Bill.Designer.cs">
+      <DependentUpon>frmAddCustomer_Bill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmBill.Designer.cs">
+      <DependentUpon>frmBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmChangePassword.Designer.cs">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmForgetPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmForgetPass.Designer.cs">
+      <DependentUpon>frmForgetPass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmKeyboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmKeyboard.Designer.cs">
+      <DependentUpon>frmKeyboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmBillInfomation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmBillInfomation.Designer.cs">
+      <DependentUpon>frmBillInfomation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmlogin1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmlogin1.Designer.cs">
+      <DependentUpon>frmlogin1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\InformationAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\InformationAccount.Designer.cs">
+      <DependentUpon>InformationAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UCSupplier.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UCSupplier.Designer.cs">
+      <DependentUpon>UCSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserArea.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserArea.Designer.cs">
+      <DependentUpon>UserArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserCustomer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserCustomer.Designer.cs">
+      <DependentUpon>UserCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserDiary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserDiary.Designer.cs">
+      <DependentUpon>UserDiary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserImportEx.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserImportEx.Designer.cs">
+      <DependentUpon>UserImportEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserInvoice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserInvoice.Designer.cs">
+      <DependentUpon>UserInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="View\UserMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserMenu.Designer.cs">
+      <DependentUpon>UserMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserShift.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserShift.Designer.cs">
+      <DependentUpon>UserShift.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserStaff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserStaff.Designer.cs">
+      <DependentUpon>UserStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserStatistical.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserStatistical.Designer.cs">
+      <DependentUpon>UserStatistical.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserTable.Designer.cs">
+      <DependentUpon>UserTable.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\Bill.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmAccount.resx">
+      <DependentUpon>frmAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmAddCustomer_Bill.resx">
+      <DependentUpon>frmAddCustomer_Bill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmBill.resx">
+      <DependentUpon>frmBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmChangePassword.resx">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmForgetPass.resx">
+      <DependentUpon>frmForgetPass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmKeyboard.resx">
+      <DependentUpon>frmKeyboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmBillInfomation.resx">
+      <DependentUpon>frmBillInfomation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmlogin1.resx">
+      <DependentUpon>frmlogin1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\InformationAccount.resx">
+      <DependentUpon>InformationAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UCSupplier.resx">
+      <DependentUpon>UCSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserArea.resx">
+      <DependentUpon>UserArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserCustomer.resx">
+      <DependentUpon>UserCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserDiary.resx">
+      <DependentUpon>UserDiary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserImportEx.resx">
+      <DependentUpon>UserImportEx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserInvoice.resx">
+      <DependentUpon>UserInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserMenu.resx">
+      <DependentUpon>UserMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserShift.resx">
+      <DependentUpon>UserShift.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserStaff.resx">
+      <DependentUpon>UserStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserStatistical.resx">
+      <DependentUpon>UserStatistical.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserTable.resx">
+      <DependentUpon>UserTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\QLQuanCaPhe.DTO.MenuDTO.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props'))" />
+  </Target>
+</Project>

@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLQuanCaPhe", "QLQuanCaPhe\QLQuanCaPhe.csproj", "{DA7D6E51-CE54-42B8-9460-40D5507B4402}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Coffee Shop", "Coffee Shop\Coffee Shop.vdproj", "{87847F0B-9632-48CA-B0AB-AAA8DF6862FE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA7D6E51-CE54-42B8-9460-40D5507B4402}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA7D6E51-CE54-42B8-9460-40D5507B4402}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA7D6E51-CE54-42B8-9460-40D5507B4402}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA7D6E51-CE54-42B8-9460-40D5507B4402}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87847F0B-9632-48CA-B0AB-AAA8DF6862FE}.Debug|Any CPU.ActiveCfg = Debug
+		{87847F0B-9632-48CA-B0AB-AAA8DF6862FE}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0A854243-4882-430A-8773-02D49A3EBD01}
+	EndGlobalSection
+EndGlobal

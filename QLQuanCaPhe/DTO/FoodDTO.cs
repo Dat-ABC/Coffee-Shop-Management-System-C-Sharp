@@ -26,6 +26,7 @@ namespace QLQuanCaPhe.DTO
         public string Unit { get => unit; set => unit = value; }
         public int CategoryID { get => categoryID; set => categoryID = value; }
 
+
         public FoodDTO(string foodName, int categoryID, float price, Image image, string unit, string categoryName) 
         {
             this.FoodName = foodName;

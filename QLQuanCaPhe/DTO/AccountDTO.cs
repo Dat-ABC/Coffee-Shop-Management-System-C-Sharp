@@ -31,6 +31,7 @@ namespace QLQuanCaPhe.DTO
         public int Type { get => type; set => type = value; }
         public int IsDeleteAccount { get => isDeleteAccount; set => isDeleteAccount = value; }
 
+
         public AccountDTO(string userName, string displayName, Image ownerPhoto, string email, string phone, string password, int type, string typeName, int isDeleteAccount)
         {
             UserName = userName;

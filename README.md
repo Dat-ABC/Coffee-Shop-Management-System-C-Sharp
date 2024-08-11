@@ -42,6 +42,10 @@ This Coffee Shop Management System is designed to help cafe owners and staff eff
 - Generate sales reports, revenue reports, inventory reports, and employee performance reports.
 - Export reports to excel file.
 
+## Technology
+- Windows Form with c# (for frontend and backend).
+- SQL Server (for database).
+
 ## illustration
 
 ![illustration](Images/login.png) Login | ![illustration](Images/print_invoice.png) Print Invoice |
@@ -76,10 +80,6 @@ This Coffee Shop Management System is designed to help cafe owners and staff eff
 
 ![illustration](Images/decentralization.png) Decentralizaion |
 |-|
-
-## Installation
-Net framework (for frontend and backend).
-SQLServer (for database).
 
 ## Contact
 For any inquiries or support, please contact nguyendatkak@gmail.com.

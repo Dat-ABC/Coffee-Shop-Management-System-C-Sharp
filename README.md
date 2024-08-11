@@ -1,8 +1,11 @@
 # Coffee Shop Management System
+-----------------------------
 ## Overview
+-----------------------------
 This Coffee Shop Management System is designed to help cafe owners and staff efficiently manage daily operations. The system includes features for managing orders, menu, bill, warehouse, supplier, statiscal, shift, activity log, employees, customer information, and assign usage rights to each type of account. It aims to streamline the workflow, enhance customer service, and improve overall business efficiency.
 
 ## Features
+-----------------------------
 ### Order Management
 Place new orders with ease.
 Track ongoing and completed orders.
@@ -40,25 +43,44 @@ Generate sales reports, revenue reports, inventory reports, and employee perform
 Export reports to excel file.
 
 ## illustration
-![Login](Images/login.png)
-![Orders](https://drive.google.com/file/d/1_oVc2JUU3ALtBcVWSlIZDooVnf_gFapN/view?usp=drive_link)
-![Menu](https://drive.google.com/file/d/1oJl3tCRL4BqsZZs1Z3kum3WWF9rGEG11/view?usp=drive_link)
-![Bill](https://drive.google.com/file/d/1RafhxVH6-EliMxYKwcPeTBGXCI2RtsHm/view?usp=drive_link)
-![Area](https://drive.google.com/file/d/1mqbbomHPemJS6d3adbD3488-3kxfk9XY/view?usp=drive_link)
-![Customer](https://drive.google.com/file/d/1siTHvToNXpdV-rUh4iQSCMc9R6wKViKj/view?usp=sharing)
-![Supplier](https://drive.google.com/file/d/1uTcvLBPvRUpiA-lOuv2F2udOlz5kUtN1/view?usp=drive_link)
-![Import](https://drive.google.com/file/d/13xOQcX5K0sLZs75JXMCeleT9SXxn-RBh/view?usp=drive_link)
-![Export](https://drive.google.com/file/d/1D4kl1uAQANDS9DdtNSOYxCwmMIiDrkAx/view?usp=drive_link)
-![Items](https://drive.google.com/file/d/1lepmMdBEvsIY_syir-gEpWsASlBSNHcA/view?usp=drive_link)
+-----------------------
 
+![illustration](Images/login.png) Login | ![illustration](Images/sell.png) Sell |
+|-|-|
 
+![illustration](Images/menu.png) Menu | ![illustration](Images/area.png) Area |
+|-|-|
+
+![illustration](Images/customer.png) Customer Information | ![illustration](Images/bill.png) Bill |
+|-|-|
+
+![illustration](Images/supplier.png)  Suppier | ![illustration](Images/import.png) Import Products |
+|-|-|
+
+![illustration](Images/export.png) Export Products | ![illustration](Images/item.png) Items |
+|-|-|
+
+![illustration](Images/warehouse.png) Warehouse | ![illustration](Images/statistical.png) Statistical |
+|-|-|
+
+![illustration](Images/shift.png) Shift | ![illustration](Images/shift_111.png) Shift |
+|-|-|
+
+![illustration](Images/diary.png) Activity Log | ![illustration](Images/user.png) Users |
+|-|-|
+
+![illustration](Images/decentralization.png) Decentralizaion |
+|-|
 
 ## Installation
+-----------------------------
 Net framework (for frontend and backend)
 SQLServer (for database)
 
-## Installation instructions:
+## Installation instructions
+-----------------------------
 Open folder: Coffee Shop -> open file HDCaiDatUngDung.txt, language is Vietnamese
 
 ## Contact
+-----------------------------
 For any inquiries or support, please contact nguyendatkak@gmail.com.

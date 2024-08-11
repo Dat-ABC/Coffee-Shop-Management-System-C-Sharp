@@ -1,12 +1,7 @@
 ﻿using QLQuanCaPhe.DAO;
 using QLQuanCaPhe.DTO;
-using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace QLQuanCaPhe.BUS
 {
@@ -41,7 +36,11 @@ namespace QLQuanCaPhe.BUS
         {
             Username = username;
             AccountDTO account = GetAccountByUserName(username);
-            DisplayName = account.DisplayName;
+            if (account != null)
+            {
+                DisplayName = account.DisplayName;
+            }
+            
             return AccountDAO.Instance.login(username, password);
         }
 

@@ -1,14 +1,7 @@
 ﻿using QLQuanCaPhe.BUS;
-using QLQuanCaPhe.DTO;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QLQuanCaPhe
@@ -183,25 +176,6 @@ namespace QLQuanCaPhe
             BUS_Diary.Instance.InsertDiary(DateTime.Now, "Xem thống kê", "Xem báo cáo doanh thu theo thời gian và từ khách hàng", BUS_Account.DisplayName);
             loadDgvRevenue(dtpRevenueStart.Value, dtpRevenueEnd.Value);
             loadDgvSpend(dtpRevenueStart.Value, dtpRevenueEnd.Value);
-            try
-            {
-                string revenueText = lblRevenue.Text.Split(' ')[3].Split(',')[0].Trim();
-
-                string spendText = lblSpend.Text.Split(' ')[2].Split(',')[0].Trim();
-
-                decimal revenue = decimal.Parse(revenueText);
-
-                decimal spend = decimal.Parse(spendText);
-
-                decimal profit = revenue - spend;
-
-                CultureInfo cultureInfo = new CultureInfo("vi-VN");
-
-                string total = profit.ToString("c", cultureInfo);
-
-                lblProfit.Text = "Lợi nhuận: " + total;
-            }
-            catch { }
         }
 
 

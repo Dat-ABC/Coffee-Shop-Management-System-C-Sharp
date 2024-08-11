@@ -34,7 +34,6 @@ namespace QLQuanCaPhe
             this.tabOverview = new System.Windows.Forms.TabPage();
             this.label10 = new System.Windows.Forms.Label();
             this.cboOverview = new System.Windows.Forms.ComboBox();
-            this.lblProfit = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.dgvSpend = new System.Windows.Forms.DataGridView();
@@ -117,7 +116,6 @@ namespace QLQuanCaPhe
             this.tabOverview.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(41)))), ((int)(((byte)(123)))));
             this.tabOverview.Controls.Add(this.label10);
             this.tabOverview.Controls.Add(this.cboOverview);
-            this.tabOverview.Controls.Add(this.lblProfit);
             this.tabOverview.Controls.Add(this.groupBox6);
             this.tabOverview.Controls.Add(this.label7);
             this.tabOverview.Controls.Add(this.label6);
@@ -140,7 +138,7 @@ namespace QLQuanCaPhe
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Transparent;
-            this.label10.Location = new System.Drawing.Point(23, 114);
+            this.label10.Location = new System.Drawing.Point(23, 106);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(148, 32);
             this.label10.TabIndex = 50;
@@ -151,23 +149,11 @@ namespace QLQuanCaPhe
             this.cboOverview.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboOverview.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboOverview.FormattingEnabled = true;
-            this.cboOverview.Location = new System.Drawing.Point(207, 106);
+            this.cboOverview.Location = new System.Drawing.Point(207, 98);
             this.cboOverview.Name = "cboOverview";
             this.cboOverview.Size = new System.Drawing.Size(308, 40);
             this.cboOverview.TabIndex = 46;
             this.cboOverview.SelectedIndexChanged += new System.EventHandler(this.cboOverview_SelectedIndexChanged);
-            // 
-            // lblProfit
-            // 
-            this.lblProfit.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.lblProfit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProfit.ForeColor = System.Drawing.Color.White;
-            this.lblProfit.Location = new System.Drawing.Point(608, 106);
-            this.lblProfit.Name = "lblProfit";
-            this.lblProfit.Size = new System.Drawing.Size(809, 81);
-            this.lblProfit.TabIndex = 45;
-            this.lblProfit.Text = "Lợi nhuận: ";
-            this.lblProfit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox6
             // 
@@ -176,9 +162,9 @@ namespace QLQuanCaPhe
             this.groupBox6.Controls.Add(this.btnSpend);
             this.groupBox6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox6.ForeColor = System.Drawing.Color.White;
-            this.groupBox6.Location = new System.Drawing.Point(1022, 202);
+            this.groupBox6.Location = new System.Drawing.Point(1022, 165);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(973, 930);
+            this.groupBox6.Size = new System.Drawing.Size(973, 967);
             this.groupBox6.TabIndex = 4;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Khoản chi";
@@ -190,7 +176,7 @@ namespace QLQuanCaPhe
             this.panel6.ForeColor = System.Drawing.Color.Black;
             this.panel6.Location = new System.Drawing.Point(6, 107);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(962, 751);
+            this.panel6.Size = new System.Drawing.Size(962, 788);
             this.panel6.TabIndex = 31;
             // 
             // dgvSpend
@@ -202,13 +188,13 @@ namespace QLQuanCaPhe
             this.dgvSpend.Name = "dgvSpend";
             this.dgvSpend.RowHeadersWidth = 82;
             this.dgvSpend.RowTemplate.Height = 40;
-            this.dgvSpend.Size = new System.Drawing.Size(962, 748);
+            this.dgvSpend.Size = new System.Drawing.Size(962, 785);
             this.dgvSpend.TabIndex = 13;
             // 
             // lblSpend
             // 
             this.lblSpend.AutoSize = true;
-            this.lblSpend.Location = new System.Drawing.Point(17, 875);
+            this.lblSpend.Location = new System.Drawing.Point(15, 918);
             this.lblSpend.Name = "lblSpend";
             this.lblSpend.Size = new System.Drawing.Size(127, 32);
             this.lblSpend.TabIndex = 30;
@@ -269,9 +255,9 @@ namespace QLQuanCaPhe
             this.groupBox1.Controls.Add(this.btnRevenue);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(6, 202);
+            this.groupBox1.Location = new System.Drawing.Point(6, 165);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(973, 930);
+            this.groupBox1.Size = new System.Drawing.Size(973, 967);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Doanh thu";
@@ -283,7 +269,7 @@ namespace QLQuanCaPhe
             this.panel4.ForeColor = System.Drawing.Color.Black;
             this.panel4.Location = new System.Drawing.Point(6, 107);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(962, 748);
+            this.panel4.Size = new System.Drawing.Size(962, 785);
             this.panel4.TabIndex = 31;
             // 
             // dgvRevenue
@@ -295,13 +281,13 @@ namespace QLQuanCaPhe
             this.dgvRevenue.Name = "dgvRevenue";
             this.dgvRevenue.RowHeadersWidth = 82;
             this.dgvRevenue.RowTemplate.Height = 40;
-            this.dgvRevenue.Size = new System.Drawing.Size(962, 745);
+            this.dgvRevenue.Size = new System.Drawing.Size(962, 782);
             this.dgvRevenue.TabIndex = 13;
             // 
             // lblRevenue
             // 
             this.lblRevenue.AutoSize = true;
-            this.lblRevenue.Location = new System.Drawing.Point(17, 875);
+            this.lblRevenue.Location = new System.Drawing.Point(17, 918);
             this.lblRevenue.Name = "lblRevenue";
             this.lblRevenue.Size = new System.Drawing.Size(211, 32);
             this.lblRevenue.TabIndex = 30;
@@ -896,7 +882,6 @@ namespace QLQuanCaPhe
         private System.Windows.Forms.DataGridView dgvSpend;
         private System.Windows.Forms.Label lblSpend;
         private System.Windows.Forms.Button btnSpend;
-        private System.Windows.Forms.Label lblProfit;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.DataGridView dgvQuantity;

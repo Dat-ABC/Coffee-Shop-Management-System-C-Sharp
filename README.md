@@ -78,11 +78,8 @@ This Coffee Shop Management System is designed to help cafe owners and staff eff
 |-|
 
 ## Installation
-Net framework (for frontend and backend)
-SQLServer (for database)
-
-## Installation instructions
-Open folder: Coffee Shop -> open file HDCaiDatUngDung.txt, language is Vietnamese
+Net framework (for frontend and backend).
+SQLServer (for database).
 
 ## Contact
 For any inquiries or support, please contact nguyendatkak@gmail.com.

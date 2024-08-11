@@ -1,6 +1,6 @@
 # Coffee Shop Management System
 ## Overview
-This Coffee Shop Management System is designed to help cafe owners and staff efficiently manage daily operations. The system includes features for managing orders, menu, bill, warehouse, supplier, statiscal, shift, activity log, employees, customer information, and assign usage rights to each type of account. It aims to streamline the workflow, enhance customer service, and improve overall business efficiency.
+This Coffee Shop Management System is designed to help cafe owners and staff efficiently manage daily operations. The system includes features for managing orders, menu, area, bill, warehouse, supplier, statiscal, shift, activity log, employees, customer information, and assign usage rights to each type of account. It aims to streamline the workflow, enhance customer service, and improve overall business efficiency.
 
 ## Features
 1. Order Management
@@ -15,27 +15,30 @@ This Coffee Shop Management System is designed to help cafe owners and staff eff
 3. Menu management
 - Manage categories and products, can add or export to excel file.
 
-4. Bill management
+4. Area management
+- Manage tables and areas.
+
+5. Bill management
 - View invoices and details over time, export to excel file or reprint invoices.
 
-5. Employee Management
+6. Employee Management
 - Add, update, and delete employee information.
 - Assign roles and permissions to staff members.
 
-6. Customer Management
+7. Customer Management
 - Maintain a customer database with contact details.
 
-7. Supplier Management:
+8. Supplier Management:
 - Maintain a supplier database with contact details.
 
-8. Shift Management:
+9. Shift Management:
 - Assign work shifts to each employee, can be assigned using excel file.
 
-9. Activity Log
+10. Activity Log
 - Save important operational information.
 - View logs by activity, employee, data exported to excel file.
 
-10. Reporting & Analytics
+11. Statistical
 - Generate sales reports, revenue reports, inventory reports, and employee performance reports.
 - Export reports to excel file.
 

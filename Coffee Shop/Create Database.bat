@@ -1,1 +1,0 @@
-sqlcmd -E -S .\DAT -i OriginalData.sql

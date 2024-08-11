@@ -40,7 +40,7 @@ Generate sales reports, revenue reports, inventory reports, and employee perform
 Export reports to excel file.
 
 ## illustration
-![Login](https://drive.google.com/file/d/1-tNcf0NCC4Ajf2rFYj2P-BVSQXXIzs3r/view?usp=drive_link)
+![Login](Images/login.png)
 ![Orders](https://drive.google.com/file/d/1_oVc2JUU3ALtBcVWSlIZDooVnf_gFapN/view?usp=drive_link)
 ![Menu](https://drive.google.com/file/d/1oJl3tCRL4BqsZZs1Z3kum3WWF9rGEG11/view?usp=drive_link)
 ![Bill](https://drive.google.com/file/d/1RafhxVH6-EliMxYKwcPeTBGXCI2RtsHm/view?usp=drive_link)

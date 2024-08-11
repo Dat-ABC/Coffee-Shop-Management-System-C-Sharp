@@ -44,8 +44,11 @@ This Coffee Shop Management System is designed to help cafe owners and staff eff
 
 ## illustration
 
-![illustration](Images/login.png) Login | ![illustration](Images/sell.png) Sell |
+![illustration](Images/login.png) Login | ![illustration](Images/print_invoice.png) Print Invoice |
 |-|-|
+
+![illustration](Images/sell.png) Sell |
+|-|
 
 ![illustration](Images/menu.png) Menu | ![illustration](Images/area.png) Area |
 |-|-|

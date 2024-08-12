@@ -627,7 +627,7 @@ namespace QLQuanCaPhe.View
                     i++;
                 }
 
-                cboNameImport.SelectedIndex = i;
+                cboItemTypeImport.SelectedIndex = i;
 
                 i = 0;
                 foreach (ItemsDTO items in cboNameImport.Items)
@@ -991,7 +991,7 @@ namespace QLQuanCaPhe.View
                     i++;
                 }
 
-                cboNameEx.SelectedIndex = i;
+                cboItemTypeEx.SelectedIndex = i;
 
 
                 i = 0;

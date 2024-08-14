@@ -81,5 +81,8 @@ This Coffee Shop Management System is designed to help cafe owners and staff eff
 ![illustration](Images/decentralization.png) Decentralizaion |
 |-|
 
+# Video
+https://www.youtube.com/watch?v=-X5ryMT-vg4&t=43s
+
 ## Contact
 For any inquiries or support, please contact nguyendatkak@gmail.com.

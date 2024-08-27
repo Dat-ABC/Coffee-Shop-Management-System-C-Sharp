@@ -43,7 +43,7 @@ namespace QLQuanCaPhe
 
                         var fromAddress = new MailAddress("nguyendat6789999@gmail.com");
                         var toAddress = new MailAddress(txtEmail.Text.ToString());
-                        const string frompass = "jfer faxm zhzk vnnr";
+                        const string frompass = ""; # password từ gmail
                         const string subject = "Mã OTP từ Coffee Shop Management";
                         string body = otp.ToString();
                         using (var msg = new MailMessage(fromAddress, toAddress))

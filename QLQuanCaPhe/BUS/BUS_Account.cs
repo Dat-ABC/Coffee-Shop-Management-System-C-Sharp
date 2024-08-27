@@ -5,6 +5,7 @@ using System.Drawing;
 
 namespace QLQuanCaPhe.BUS
 {
+    # no
     public class BUS_Account
     {
         private static BUS_Account instance;

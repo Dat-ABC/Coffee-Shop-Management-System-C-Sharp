@@ -2,7 +2,7 @@
 ## Overview
 This Coffee Shop Management System is designed to help cafe owners and staff efficiently manage daily operations. The system includes features for managing orders, menu, area, bill, warehouse, supplier, statiscal, shift, activity log, employees, customer information, and assign usage rights to each type of account. It aims to streamline the workflow, enhance customer service, and improve overall business efficiency.
 
-## Features
+## Function
 1. Order Management
 - Place new orders with ease.
 - Track ongoing and completed orders.
